@@ -10,6 +10,7 @@ import (
 	"github.com/aquasecurity/defsec/rules"
 	"github.com/aquasecurity/tfsec/internal/app/tfsec/block"
 	"github.com/aquasecurity/tfsec/internal/app/tfsec/parser"
+	_ "github.com/aquasecurity/tfsec/internal/app/tfsec/rules"
 	"github.com/aquasecurity/tfsec/internal/app/tfsec/scanner"
 )
 
