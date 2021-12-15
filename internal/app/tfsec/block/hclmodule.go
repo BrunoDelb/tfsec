@@ -45,18 +45,20 @@ func (h *HCLModule) GetBlocksByTypeLabel(typeLabel string) Blocks {
 	return h.blockMap[typeLabel]
 }
 
-func (c *HCLModule) getBlocksByType(blockType string, label string) Blocks {
+func (c *HCLModule) getBlocksByType(blockType string, labels ...string) Blocks {
 	var results Blocks
-	for _, block := range c.blockMap[label] {
-		if block.Type() == blockType {
-			results = append(results, block)
+	for _, label := range labels {
+		for _, block := range c.blockMap[label] {
+			if block.Type() == blockType {
+				results = append(results, block)
+			}
 		}
 	}
 	return results
 }
 
-func (c *HCLModule) GetResourcesByType(label string) Blocks {
-	return c.getBlocksByType("resource", label)
+func (c *HCLModule) GetResourcesByType(labels ...string) Blocks {
+	return c.getBlocksByType("resource", labels...)
 }
 
 func (c *HCLModule) GetDatasByType(label string) Blocks {
@@ -103,11 +105,11 @@ func (c *HCLModule) GetReferencedBlock(referringAttr Attribute, parentBlock Bloc
 	return nil, fmt.Errorf("no referenced block found in '%s'", referringAttr.Name())
 }
 
-func (c *HCLModule) GetReferencingResources(originalBlock Block, referencingLabel string, referencingAttributeName string) (Blocks, error) {
+func (c *HCLModule) GetReferencingResources(originalBlock Block, referencingLabel string, referencingAttributeName string) Blocks {
 	return c.getReferencingBlocks(originalBlock, "resource", referencingLabel, referencingAttributeName)
 }
 
-func (c *HCLModule) getReferencingBlocks(originalBlock Block, referencingType string, referencingLabel string, referencingAttributeName string) (Blocks, error) {
+func (c *HCLModule) getReferencingBlocks(originalBlock Block, referencingType string, referencingLabel string, referencingAttributeName string) Blocks {
 	blocks := c.getBlocksByType(referencingType, referencingLabel)
 	var results Blocks
 	for _, block := range blocks {
@@ -128,5 +130,5 @@ func (c *HCLModule) getReferencingBlocks(originalBlock Block, referencingType st
 			}
 		}
 	}
-	return results, nil
+	return results
 }
