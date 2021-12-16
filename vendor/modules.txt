@@ -25,7 +25,7 @@ github.com/agext/levenshtein
 github.com/apparentlymart/go-cidr/cidr
 # github.com/apparentlymart/go-textseg/v13 v13.0.0
 github.com/apparentlymart/go-textseg/v13/textseg
-# github.com/aquasecurity/defsec v0.0.38-0.20211215165825-9c2d6ed342bc
+# github.com/aquasecurity/defsec v0.1.2
 ## explicit
 github.com/aquasecurity/defsec/cidr
 github.com/aquasecurity/defsec/formatters
@@ -60,6 +60,7 @@ github.com/aquasecurity/defsec/provider/aws/neptune
 github.com/aquasecurity/defsec/provider/aws/rds
 github.com/aquasecurity/defsec/provider/aws/redshift
 github.com/aquasecurity/defsec/provider/aws/s3
+github.com/aquasecurity/defsec/provider/aws/sam
 github.com/aquasecurity/defsec/provider/aws/sns
 github.com/aquasecurity/defsec/provider/aws/sqs
 github.com/aquasecurity/defsec/provider/aws/ssm
@@ -151,7 +152,13 @@ github.com/aquasecurity/defsec/rules/digitalocean/compute
 github.com/aquasecurity/defsec/rules/digitalocean/spaces
 github.com/aquasecurity/defsec/rules/general/secrets
 github.com/aquasecurity/defsec/rules/github/repositories
+github.com/aquasecurity/defsec/rules/google/bigquery
 github.com/aquasecurity/defsec/rules/google/compute
+github.com/aquasecurity/defsec/rules/google/dns
+github.com/aquasecurity/defsec/rules/google/gke
+github.com/aquasecurity/defsec/rules/google/platform
+github.com/aquasecurity/defsec/rules/google/sql
+github.com/aquasecurity/defsec/rules/google/storage
 github.com/aquasecurity/defsec/rules/kubernetes/network
 github.com/aquasecurity/defsec/rules/openstack/compute
 github.com/aquasecurity/defsec/rules/oracle/compute
@@ -297,9 +304,9 @@ github.com/mitchellh/go-wordwrap
 # github.com/olekukonko/tablewriter v0.0.5
 ## explicit
 github.com/olekukonko/tablewriter
-# github.com/owenrumney/go-sarif v1.0.12
+# github.com/owenrumney/go-sarif v1.0.14
 github.com/owenrumney/go-sarif/sarif
-# github.com/owenrumney/squealer v0.2.28
+# github.com/owenrumney/squealer v0.3.1
 ## explicit
 github.com/owenrumney/squealer/internal/app/squealer/match
 github.com/owenrumney/squealer/internal/app/squealer/mertics
