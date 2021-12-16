@@ -156,6 +156,7 @@ github.com/aquasecurity/defsec/rules/google/bigquery
 github.com/aquasecurity/defsec/rules/google/compute
 github.com/aquasecurity/defsec/rules/google/dns
 github.com/aquasecurity/defsec/rules/google/gke
+github.com/aquasecurity/defsec/rules/google/kms
 github.com/aquasecurity/defsec/rules/google/platform
 github.com/aquasecurity/defsec/rules/google/sql
 github.com/aquasecurity/defsec/rules/google/storage
