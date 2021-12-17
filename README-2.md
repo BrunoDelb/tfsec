@@ -1,9 +1,9 @@
-Les nouveaux tests sont ajoutés au répertoire internal/app/tfsec/rules/alicloud/
+The new tests are added in the internal/app/tfsec/rules/alicloud/ folder.
 
-Quand un nouveau service est testé, l'ajouter au fichier internal/app/tfsec/rules/init.go
+When a new service is tested, add it to the internal/app/tfsec/rules/init.go file.
 
-Ajouter les tests au fichier example/main.tf
+Add the tests to the example/main.tf file.
 
-Relancer les tests :
+Relaunch tests:
 
 go run ./cmd/tfsec
