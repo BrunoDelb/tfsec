@@ -18,6 +18,7 @@ const (
 	OracleProvider       Provider = "oracle"
 	OpenStackProvider    Provider = "openstack"
 	CloudStackProvider   Provider = "cloudstack"
+	AlicloudProvider     Provider = "alicloud"
 )
 
 func RuleProviderToString(provider Provider) string {
@@ -32,6 +33,8 @@ func (p Provider) DisplayName() string {
 		return "Digital Ocean"
 	case "openstack":
 		return "OpenStack"
+	case "alicloud":
+		return "Alicloud"
 	case "cloudstack":
 		return "Cloudstack"
 	default:
