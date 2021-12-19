@@ -4,6 +4,8 @@ package rules
 import (
 	_ "github.com/aquasecurity/tfsec/internal/app/tfsec/rules/alicloud/ecs"
 	_ "github.com/aquasecurity/tfsec/internal/app/tfsec/rules/alicloud/oss"
+	_ "github.com/aquasecurity/tfsec/internal/app/tfsec/rules/alicloud/ram"
+	_ "github.com/aquasecurity/tfsec/internal/app/tfsec/rules/alicloud/vpc"
 	_ "github.com/aquasecurity/tfsec/internal/app/tfsec/rules/aws/apigateway"
 	_ "github.com/aquasecurity/tfsec/internal/app/tfsec/rules/aws/athena"
 	_ "github.com/aquasecurity/tfsec/internal/app/tfsec/rules/aws/autoscaling"
